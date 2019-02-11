@@ -1,0 +1,16 @@
+.editorconfig
+.eslintignore
+.eslintrc.js
+/.git/
+.gitignore
+/.idea/
+.npmignore
+.travis.yml
+CHANGELOG.md
+CONTRIBUTORS
+/benchmark/
+bower.json
+/demo/
+gulpfile.js
+/node_modules/
+/test/

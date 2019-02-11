@@ -1,0 +1,58 @@
+{
+  "readmeFilename": "README.md",
+  "name": "reactive-text",
+  "description": "Localize words, numbers, prices and date representations for React apps. reactive-text allows you to translate your strings and to format dates, numbers, prices, and date values.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "./lib/index.js",
+  "author": "@rigidrabbit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rigidrabbit/reactive-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rigidrabbit/reactive-text/issues"
+  },
+  "scripts": {
+    "distclean": "\\rm  -f `\\find lib -type f -name '*.js' -or -name '*.map'`",
+    "eslint": "eslint './src/*.{js,jsx}' './src/**/*.{js,jsx}'; exit 0",
+    "eslint:fix": "eslint --fix './src/*.{js,jsx}' './src/**/*.{js,jsx}'; exit 0",
+    "gulp:babel": "gulp babel"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "localized-sprintf-js": "^1.0.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.2",
+    "react-css-themr": "^2.1.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8",
+    "minimatch": "^3.0.4",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.0"
+  }
+}
