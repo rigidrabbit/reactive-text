@@ -2,7 +2,7 @@
   "readmeFilename": "README.md",
   "name": "reactive-text",
   "description": "Localize words, numbers, prices and date representations for React apps. reactive-text allows you to translate your strings and to format dates, numbers, prices, and date values.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "private": true,
   "main": "./lib/index.js",
