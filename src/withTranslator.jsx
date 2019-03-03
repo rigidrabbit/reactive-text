@@ -10,18 +10,18 @@ const withTranslator = dictionary => Target => (
   class WithTranslator extends Component {
     static displayName = `WithTranslator(${Target.displayName || Target.name || 'Component'})`
     static propTypes = {
-      lang: PropTypes.string,
+      locale: PropTypes.string,
     }
     static defaultProps = {
-      lang: null,
+      locale: '',
     }
     static contextTypes = {
       translator: PropTypes.object,
-      lang: PropTypes.string,
+      locale: PropTypes.string,
     }
     static childContextTypes = {
       translator: PropTypes.object,
-      // lang: PropTypes.string,
+      locale: PropTypes.string,
     }
 
     ensureTranslator() {
@@ -41,13 +41,10 @@ const withTranslator = dictionary => Target => (
     getChildContext() {
       this.ensureTranslator()
       if (this.hasOwnTranslator) {
-        const ctx = {
+        return {
           translator: this.translator,
+          locale: this.props.locale || this.context.locale,
         }
-        // if (this.props.lang != null) {
-        //   ctx.lang = this.props.lang
-        // }
-        return ctx
       }
       return {}
     }
@@ -63,10 +60,7 @@ const withTranslator = dictionary => Target => (
 
     render() {
       const { children, ...others } = this.props
-      const lang = this.props.lang || this.context.lang
-      if (lang) {
-        this.translator.locale(lang)
-      }
+      this.translator.locale(this.props.locale || this.context.locale)
       return (
         <Target {...others} translator={this.translator}>
           {children}

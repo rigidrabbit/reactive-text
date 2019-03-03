@@ -8,27 +8,26 @@ import shapeOfTranslator from './shapeOfTranslator'
 export default class TranslatorProvider extends Component {
   static propTypes = {
     translator: shapeOfTranslator.isRequired,
-    lang: PropTypes.string,
+    locale: PropTypes.string,
   }
   static defaultProps = {
-    translator: null,
-    lang: null,
+    locale: '',
   }
   static childContextTypes = {
     translator: PropTypes.object,
-    lang: PropTypes.string,
+    locale: PropTypes.string,
   }
 
   getChildContext() {
-    this.props.translator.lang = this.props.lang
+    this.props.translator.locale(this.props.locale)
     return {
       translator: this.props.translator,
-      lang: this.props.lang,
+      locale: this.props.locale,
     }
   }
 
   render() {
-    this.props.translator.lang = this.props.lang
+    this.props.translator.locale(this.props.locale)
     const children = this.props.children
     if (React.Children.count(children) === 1) {
       return React.Children.only(children)
