@@ -11,6 +11,5 @@ CONTRIBUTORS
 /benchmark/
 bower.json
 /demo/
-gulpfile.js
 /node_modules/
 /test/
