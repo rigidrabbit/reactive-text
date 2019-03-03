@@ -20,7 +20,7 @@ export default function createTranslator(dictinary, options, parent) {
 
   function getLocale() {
     if (parent) {
-      return parent.locale
+      return parent.locale()
     }
     return localized.locale()
   }
@@ -35,7 +35,7 @@ export default function createTranslator(dictinary, options, parent) {
 
   function getCurrency() {
     if (parent) {
-      return parent.currency
+      return parent.currency()
     }
     return localized.currency()
   }
